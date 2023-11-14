@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8s6omF9nrew+BiYWJyrbzig7Hgia1qIRjVFPQYLcxi3vyGb2tHuJwnOHwn279uaWay6rLIG+ezphA7kfkCMqhw==",
+  "dgSpecHash": "z3ubUHk+Diwcf1LdOfPhuGJBLqDia9KgJI21h/coEdoUkZ2TMAsRalyenM3FbhWGUc0eaYMRNO0HYRU21nzkpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gian\\Desktop\\C#\\Veterinaria\\Veterinaria\\Veterinaria.csproj",
+  "projectFilePath": "C:\\Users\\Gian\\Desktop\\PNT1\\Final\\C#\\Veterinaria\\Veterinaria\\Veterinaria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gian\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Gian\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

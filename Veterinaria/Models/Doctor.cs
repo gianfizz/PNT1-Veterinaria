@@ -8,6 +8,8 @@ namespace Veterinaria.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Nombre del doctor es obligatorio.")]
         public string Nombre { get; set; }
     }
 }

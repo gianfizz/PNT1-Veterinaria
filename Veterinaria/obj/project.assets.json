@@ -11432,11 +11432,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gian\\Desktop\\C#\\Veterinaria\\Veterinaria\\Veterinaria.csproj",
+      "projectUniqueName": "C:\\Users\\Gian\\Desktop\\PNT1\\Final\\C#\\Veterinaria\\Veterinaria\\Veterinaria.csproj",
       "projectName": "Veterinaria",
-      "projectPath": "C:\\Users\\Gian\\Desktop\\C#\\Veterinaria\\Veterinaria\\Veterinaria.csproj",
+      "projectPath": "C:\\Users\\Gian\\Desktop\\PNT1\\Final\\C#\\Veterinaria\\Veterinaria\\Veterinaria.csproj",
       "packagesPath": "C:\\Users\\Gian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gian\\Desktop\\C#\\Veterinaria\\Veterinaria\\obj\\",
+      "outputPath": "C:\\Users\\Gian\\Desktop\\PNT1\\Final\\C#\\Veterinaria\\Veterinaria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gian\\AppData\\Roaming\\NuGet\\NuGet.Config",

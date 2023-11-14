@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Veterinaria.Context;
 
@@ -11,9 +12,11 @@ using Veterinaria.Context;
 namespace Veterinaria.Migrations
 {
     [DbContext(typeof(VeterinariaDatabaseContext))]
-    partial class VeterinariaDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20231113200218_foreignkeys")]
+    partial class foreignkeys
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

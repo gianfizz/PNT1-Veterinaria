@@ -22,9 +22,9 @@ namespace Veterinaria.Controllers
         // GET: Servicio
         public async Task<IActionResult> Index()
         {
-              return _context.Servicios != null ? 
-                          View(await _context.Servicios.ToListAsync()) :
-                          Problem("Entity set 'VeterinariaDatabaseContext.Servicios'  is null.");
+            return _context.Servicios != null ?
+                View(await _context.Servicios.ToListAsync()) :
+                Problem("Entity set 'VeterinariaDatabaseContext.Servicios'  is null.");
         }
 
         // GET: Servicio/Details/5
@@ -46,17 +46,18 @@ namespace Veterinaria.Controllers
         }
 
         // GET: Servicio/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre");
+            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre");
+
             return View();
         }
 
         // POST: Servicio/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Fecha,DetalleServicio")] Servicio servicio)
+        public async Task<IActionResult> Create([Bind("Id,ClienteId,DoctorId,Fecha,DetalleServicio")] Servicio servicio)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +65,12 @@ namespace Veterinaria.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(servicio);
+
+            // Recargar las SelectList en caso de error
+            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre", servicio.ClienteId);
+            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre", servicio.DoctorId);
+
+            return View("Create", servicio); // Renombrar la vista "Create"
         }
 
         // GET: Servicio/Edit/5
@@ -80,15 +86,17 @@ namespace Veterinaria.Controllers
             {
                 return NotFound();
             }
+
+            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre", servicio.ClienteId);
+            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre", servicio.DoctorId);
+
             return View(servicio);
         }
 
         // POST: Servicio/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Fecha,DetalleServicio")] Servicio servicio)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ClienteId,DoctorId,Fecha,DetalleServicio")] Servicio servicio)
         {
             if (id != servicio.Id)
             {
@@ -115,6 +123,10 @@ namespace Veterinaria.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre", servicio.ClienteId);
+            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre", servicio.DoctorId);
+
             return View(servicio);
         }
 
@@ -145,19 +157,20 @@ namespace Veterinaria.Controllers
             {
                 return Problem("Entity set 'VeterinariaDatabaseContext.Servicios'  is null.");
             }
+
             var servicio = await _context.Servicios.FindAsync(id);
             if (servicio != null)
             {
                 _context.Servicios.Remove(servicio);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ServicioExists(int id)
         {
-          return (_context.Servicios?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Servicios?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

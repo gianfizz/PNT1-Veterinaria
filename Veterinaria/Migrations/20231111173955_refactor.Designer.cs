@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Veterinaria.Context;
 
@@ -11,9 +12,11 @@ using Veterinaria.Context;
 namespace Veterinaria.Migrations
 {
     [DbContext(typeof(VeterinariaDatabaseContext))]
-    partial class VeterinariaDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20231111173955_refactor")]
+    partial class refactor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,30 +96,7 @@ namespace Veterinaria.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClienteId");
-
-                    b.HasIndex("DoctorId");
-
                     b.ToTable("Servicios");
-                });
-
-            modelBuilder.Entity("Veterinaria.Models.Servicio", b =>
-                {
-                    b.HasOne("Veterinaria.Models.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Veterinaria.Models.Doctor", "Doctor")
-                        .WithMany()
-                        .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cliente");
-
-                    b.Navigation("Doctor");
                 });
 #pragma warning restore 612, 618
         }

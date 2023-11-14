@@ -12,7 +12,6 @@ namespace Veterinaria.Context
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Doctor> Doctores { get; set; }
         public DbSet<Servicio> Servicios { get; set; }
-        public DbSet<Veterinarias> Veterinarias { get; set; }
 
     }
 }
