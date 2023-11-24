@@ -22,9 +22,8 @@ namespace Veterinaria.Controllers
         // GET: Servicio
         public async Task<IActionResult> Index()
         {
-            return _context.Servicios != null ?
-                View(await _context.Servicios.ToListAsync()) :
-                Problem("Entity set 'VeterinariaDatabaseContext.Servicios'  is null.");
+            var veterinariaDatabaseContext = _context.Servicios.Include(s => s.NombreCliente).Include(s => s.NombreDoctor);
+            return View(await veterinariaDatabaseContext.ToListAsync());
         }
 
         // GET: Servicio/Details/5
@@ -36,6 +35,8 @@ namespace Veterinaria.Controllers
             }
 
             var servicio = await _context.Servicios
+                .Include(s => s.NombreCliente)
+                .Include(s => s.NombreDoctor)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (servicio == null)
             {
@@ -46,31 +47,27 @@ namespace Veterinaria.Controllers
         }
 
         // GET: Servicio/Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre");
-            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre");
-
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido");
+            ViewData["DoctorId"] = new SelectList(_context.Doctores, "Id", "Nombre");
             return View();
         }
 
         // POST: Servicio/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ClienteId,DoctorId,Fecha,DetalleServicio")] Servicio servicio)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(servicio);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-
-            // Recargar las SelectList en caso de error
-            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre", servicio.ClienteId);
-            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre", servicio.DoctorId);
-
-            return View("Create", servicio); // Renombrar la vista "Create"
+            
+            _context.Add(servicio);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido", servicio.ClienteId);
+            ViewData["DoctorId"] = new SelectList(_context.Doctores, "Id", "Nombre", servicio.DoctorId);
+            return View(servicio);
         }
 
         // GET: Servicio/Edit/5
@@ -86,14 +83,14 @@ namespace Veterinaria.Controllers
             {
                 return NotFound();
             }
-
-            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre", servicio.ClienteId);
-            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre", servicio.DoctorId);
-
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido", servicio.ClienteId);
+            ViewData["DoctorId"] = new SelectList(_context.Doctores, "Id", "Nombre", servicio.DoctorId);
             return View(servicio);
         }
 
         // POST: Servicio/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ClienteId,DoctorId,Fecha,DetalleServicio")] Servicio servicio)
@@ -103,30 +100,26 @@ namespace Veterinaria.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            
+            try
             {
-                try
-                {
-                    _context.Update(servicio);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ServicioExists(servicio.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Update(servicio);
+                await _context.SaveChangesAsync();
             }
-
-            ViewBag.Clientes = new SelectList(await _context.Clientes.ToListAsync(), "Id", "Nombre", servicio.ClienteId);
-            ViewBag.Doctores = new SelectList(await _context.Doctores.ToListAsync(), "Id", "Nombre", servicio.DoctorId);
-
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ServicioExists(servicio.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
+            ViewData["ClienteId"] = new SelectList(_context.Clientes, "Id", "Apellido", servicio.ClienteId);
+            ViewData["DoctorId"] = new SelectList(_context.Doctores, "Id", "Nombre", servicio.DoctorId);
             return View(servicio);
         }
 
@@ -139,6 +132,8 @@ namespace Veterinaria.Controllers
             }
 
             var servicio = await _context.Servicios
+                .Include(s => s.NombreCliente)
+                .Include(s => s.NombreDoctor)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (servicio == null)
             {
@@ -157,20 +152,32 @@ namespace Veterinaria.Controllers
             {
                 return Problem("Entity set 'VeterinariaDatabaseContext.Servicios'  is null.");
             }
-
             var servicio = await _context.Servicios.FindAsync(id);
             if (servicio != null)
             {
                 _context.Servicios.Remove(servicio);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ServicioExists(int id)
         {
-            return (_context.Servicios?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Servicios?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        public IActionResult ListarPorCliente(int clienteId)
+        {
+             var serviciosCliente = _context.Servicios
+            .Include(s => s.NombreDoctor)  // Asegúrate de incluir la relación con el Doctor
+            .Where(s => s.ClienteId == clienteId)
+            .ToList();
+
+            return View(serviciosCliente);
+        }
+
     }
+        
+
 }

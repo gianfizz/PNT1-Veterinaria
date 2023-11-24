@@ -9,97 +9,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Veterinaria
 build_property.RootNamespace = Veterinaria
-build_property.ProjectDir = C:\Users\Gian\Desktop\PNT1\Final\C#\Veterinaria\Veterinaria\
+build_property.ProjectDir = C:\Users\Gian\Desktop\Veterinaria\PNT1-Veterinaria\Veterinaria\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Gian\Desktop\PNT1\Final\C#\Veterinaria\Veterinaria
+build_property.MSBuildProjectDirectory = C:\Users\Gian\Desktop\Veterinaria\PNT1-Veterinaria\Veterinaria
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Cliente/Create.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Cliente/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Cliente/Delete.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Cliente/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Cliente/Details.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Cliente/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Cliente/Edit.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Cliente/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Cliente/Index.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Cliente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Doctor/Create.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Doctor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Doctor/Delete.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Doctor/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Doctor/Details.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Doctor/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Doctor/Edit.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Doctor/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Doctor/Index.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Doctor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Home/Index.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Home/Privacy.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Servicio/Create.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Servicio/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Servicio/Delete.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Servicio/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Servicio/Details.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Servicio/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Servicio/Edit.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Servicio/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Servicio/Index.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Servicio/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Shared/Error.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Servicio/ListarPorCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljaW9cTGlzdGFyUG9yQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/_ViewImports.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/_ViewStart.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Gian/Desktop/PNT1/Final/C\#/Veterinaria/Veterinaria/Views/Shared/_Layout.cshtml]
+[C:/Users/Gian/Desktop/Veterinaria/PNT1-Veterinaria/Veterinaria/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-uad4x70zlh

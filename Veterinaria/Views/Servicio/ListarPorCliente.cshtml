@@ -1,0 +1,29 @@
+﻿@model List<Veterinaria.Models.Servicio>
+
+@{
+    ViewData["Title"] = "Listar Servicios por Cliente";
+}
+
+<h1>Listar Servicios por Cliente</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Doctor</th>
+            <th>Detalle del Servicio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var servicio in Model)
+        {
+            <tr>
+                <td>@servicio.Id</td>
+                <td>@servicio.Fecha</td>
+                <td>@(servicio.NombreDoctor != null ? servicio.NombreDoctor.Nombre : "N/A")</td>
+                <td>@servicio.DetalleServicio</td>
+            </tr>
+        }
+    </tbody>
+</table>
