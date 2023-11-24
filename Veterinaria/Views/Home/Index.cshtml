@@ -2,7 +2,65 @@
     ViewData["Title"] = "Home Page";
 }
 
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    h1 {
+        color: #4285f4;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        background-color: #fff;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4285f4;
+        color: #fff;
+    }
+
+    tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4285f4;
+        color: #fff;
+    }
+
+        .btn-primary:hover {
+            background-color: #2d75e0;
+        }
+</style>
+
 <div class="text-center">
+
     <h1 class="display-4">Bienvenidos a la Veterinaria.</h1>
-    <p>Arriba puede navegar por los diferentes areas de la pagina.</p>
+    <p>Arriba puede navegar por las diferentes areas de la pagina.</p>
+
+    <a asp-controller="Servicio" asp-action="Create" class="btn btn-primary">Generar Cita</a>
+    <a asp-controller="Cliente" asp-action="Create" class="btn btn-primary">Registrar Cliente</a>
+
 </div>

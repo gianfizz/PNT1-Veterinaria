@@ -13,13 +13,17 @@ namespace Veterinaria.Models
         [Display(Name = "Cliente")]
         [Required(ErrorMessage = "Debe indicar un cliente.")]
         public int ClienteId { get; set; }
+        [Display(Name = "Nombre del Cliente")]
+        public Cliente NombreCliente { get; set; }
 
         [ForeignKey("Doctor")]
         [Display(Name = "Doctor")]
         [Required(ErrorMessage = "Debe indicar un doctor.")]
         public int DoctorId { get; set; }
+        [Display(Name = "Nombre del Doctor")]
+        public Doctor NombreDoctor { get; set; }
 
-        [Required(ErrorMessage = "Fecha es obligatorio.")]
+        [Required(ErrorMessage = "Fecha es obligatoria.")]
         public DateTime Fecha { get; set; }
 
         [Display(Name = "Detalle del Servicio")]
